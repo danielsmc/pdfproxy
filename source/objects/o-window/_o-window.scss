@@ -10,7 +10,7 @@ $o-window-outer-border: 15px solid #cfd6e1;
 
 // Object Styling -------------------------------------------------------------
 .o-window {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 800px;
@@ -19,6 +19,10 @@ $o-window-outer-border: 15px solid #cfd6e1;
       bottom: 50px;
       right: 50px;
     z-index: z(ceiling);
+
+    &--open {
+        display: flex;
+    }
 
     border-right: $o-window-outer-border;
     border-left: $o-window-outer-border;
