@@ -20,7 +20,11 @@ html {
     overflow-y: scroll; // [2]
     padding: 0;
 
-    background-color: c(base, background); // Set on `<html>` to keep the background color present if the browser bounces at a scrolling boundary
+    background-color: c(base, background);
+    background-image: url(images/layout/l-desktop/wallpaper.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     color: c(base, type);
     direction: $global-type-direction;

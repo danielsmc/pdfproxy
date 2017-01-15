@@ -14,9 +14,9 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 12vw;
+    height: rem(120);
     margin: ms(1, rem);
-    width: 12vw;
+    width: rem(120);
 
     // border: 1px solid white;
 
@@ -32,9 +32,11 @@
 
     &:active,
     &:focus {
-        outline: 10px solid teal;
+        outline: $global-border-radius solid c(c-icon, background-highlight);
 
-        background-color: teal;
+        background-color: c(c-icon, background-highlight);
+
+        color: c(c-icon, text-highlight);
     }
 
     &__label {

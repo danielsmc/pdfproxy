@@ -36,7 +36,7 @@ $colors: (
     // Base -------------------------------------------------------------------
     base: (
         type:       #111111,
-        background: #ffffff
+        background: #0194cb
     ),
 
 
@@ -77,12 +77,12 @@ $colors: (
         focus:  #ff851b,
         active: #ff4136,
         busy:   #dddddd
-    )
+    ),
 
 
     // Component --------------------------------------------------------------
-//    c-component: (
-//        subcomponent: value,
-//        subcomponent: value
-//    )
+   c-icon: (
+       background-highlight: #205790,
+       text-highlight: #ffffff
+   )
 );
