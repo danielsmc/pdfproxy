@@ -1,0 +1,59 @@
+// ============================================================================
+// Object
+// Window
+// ============================================================================
+
+
+// Object Logic ---------------------------------------------------------------
+$o-window-outer-border: 15px solid #cfd6e1;
+
+
+// Object Styling -------------------------------------------------------------
+.o-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 800px;
+    height: 500px;
+    position: absolute;
+      bottom: 50px;
+      right: 50px;
+    z-index: z(ceiling);
+
+    border-right: $o-window-outer-border;
+    border-left: $o-window-outer-border;
+
+    background-color: #fdfcf8;
+    box-shadow: 0px 5px 12px 0px transparentize(#111111, 0.5);
+
+    &__titlebar {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-top: rem(6);
+
+        background-color: #cfd6e1;
+    }
+
+    &__content {
+        @include content-delobotomize();
+
+        flex-grow: 1;
+        padding: ms(1.5, rem);
+
+        border-top: 2px solid #404040;
+    }
+
+    &__summary {
+        @include component-set-type-size();
+        @include content-delobotomize();
+        @include typography-align(end);
+
+        padding-top: rem(4);
+        padding-bottom: rem(4);
+
+        background-color: #cfd6e1;
+
+        font-size: em(12);
+    }
+}

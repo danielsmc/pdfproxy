@@ -1,0 +1,30 @@
+// ============================================================================
+// Component
+// Icon
+// ============================================================================
+
+
+// Component Logic ------------------------------------------------------------
+
+
+
+// Component Styling ----------------------------------------------------------
+.c-window {
+    &__title {
+        @include component-set-type-size();
+
+        font-size: em(20);
+        line-height: 1;
+
+        cursor: default;
+    }
+
+    &__close {
+        height: rem(26);
+        width: rem(26);
+        position: relative;
+          bottom: rem(8);
+
+        background-color: transparent;
+    }
+}

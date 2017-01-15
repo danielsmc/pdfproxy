@@ -17,8 +17,7 @@
     height: rem(120);
     margin: ms(1, rem);
     width: rem(120);
-
-    // border: 1px solid white;
+    z-index: z(c-icon);
 
     background-color: transparent;
     background-position: center top;

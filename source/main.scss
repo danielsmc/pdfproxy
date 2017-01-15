@@ -200,13 +200,15 @@
 
 // Objects --------------------------------------------------------------------
 @import
-    "objects/o-object/o-object";
+    "objects/o-object/o-object",
+    "objects/o-window/o-window";
 
 
 // Components -----------------------------------------------------------------
 @import
     "components/c-component/c-component",
-    "components/c-icon/c-icon";
+    "components/c-icon/c-icon",
+    "components/c-window/c-window";
 
 
 // Media ----------------------------------------------------------------------
