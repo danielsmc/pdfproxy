@@ -27,4 +27,4 @@ Link to [`CONTRIBUTING.md`](https://github.com/$$githubAuthor/$$githubTitle/blob
 
 ## License
 
-[$$projectLicense](https://raw.githubusercontent.com/$$githubAuthor/$$githubTitle/master/LICENSE).
+[WTFPL](https://raw.githubusercontent.com/$$githubAuthor/$$githubTitle/master/LICENSE).
