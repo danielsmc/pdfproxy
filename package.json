@@ -110,6 +110,8 @@
     "clean-deploy-styles": "gulp clean-deploy-styles",
     "clean-screenshots": "gulp clean-screenshots",
     "browsersync-build": "gulp browsersync-build",
-    "browsersync-test": "gulp browsersync-test"
+    "browsersync-test": "gulp browsersync-test",
+    "config-make": "gulp config-make",
+    "config-apply": "gulp config-apply"
   }
 }
