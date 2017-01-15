@@ -1,0 +1,62 @@
+// ============================================================================
+// Component
+// Icon
+// ============================================================================
+
+
+// Component Logic ------------------------------------------------------------
+
+
+
+// Component Styling ----------------------------------------------------------
+.c-icon {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 12vw;
+    margin: ms(1, rem);
+    width: 12vw;
+
+    // border: 1px solid white;
+
+    background-color: transparent;
+    background-position: center top;
+    background-size: 75%;
+    background-repeat: no-repeat;
+
+    // States
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active,
+    &:focus {
+        outline: 10px solid teal;
+
+        background-color: teal;
+    }
+
+    &__label {
+    }
+
+    &--computer {
+        background-image: url(images/components/c-icon/computer.png);
+    }
+
+    &--garbage {
+        background-image: url(images/components/c-icon/garbage.png);
+    }
+
+    &--cat-pics {
+        background-image: url(images/components/c-icon/folder.png);
+    }
+
+    &--pdf {
+        background-image: url(images/components/c-icon/pdf.png);
+
+        position: absolute;
+        top: ms(4, rem);
+        left: 30%;
+    }
+}
