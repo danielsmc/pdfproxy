@@ -52,12 +52,11 @@
 
 </main>
 
-<div class="o-window">
+<div class="o-window" id="folder-window">
     <div class="o-window__titlebar">
         <h1 class="c-window__title">Cat Pics</h1>
 
         <button
-            id="close"
             class="c-window__close">
             <svg height="14" width="14" aria-hidden="true" viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-close"></use></svg>
         </button>
@@ -84,6 +83,24 @@
         <p>
             875 files, 10 smokeybites
         </p>
+    </div>
+</div>
+
+<div class="o-window" id="pdf-window">
+    <div class="o-window__titlebar">
+        <h1 class="c-window__title">Broken Alias</h1>
+
+        <button
+            class="c-window__close">
+            <svg height="14" width="14" aria-hidden="true" viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-close"></use></svg>
+        </button>
+    </div>
+
+    <div class="o-window__content">
+        <form action="https://ancient-cove-23618.herokuapp.com/" method="GET">
+        <input name="url">
+        <button type="submit">OK</submit>
+        </form>
     </div>
 </div>
 
