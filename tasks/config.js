@@ -27,11 +27,11 @@ gulp.task('config-make', function() {
             message: 'Project author'
         },
         {
-            name: 'projectAuthorEmail',
+            name: 'danielsmc@gmail.com',
             message: 'Author email'
         },
         {
-            name: 'projectAuthorURL',
+            name: 'https://danielmclaughl.in',
             message: 'Author URL'
         },
         {
