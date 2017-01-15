@@ -8,22 +8,23 @@ import subprocess
 app = flask.Flask(__name__)
 
 base_url = os.environ['BASE_URL']
-munge = 'Array.prototype.forEach.call(document.querySelectorAll("a"),function(d) {d.href="%sproxy?url="+encodeURIComponent(d.href);});'%base_url
+catchall_redirect = os.environ['CATCHALL_REDIRECT']
 
-@app.route("/proxy")
+munge = 'Array.prototype.forEach.call(document.querySelectorAll("a"),function(d) {d.href="%s?url="+encodeURIComponent(d.href);});'%base_url
+
+@app.route("/")
 def proxy():
     url = flask.request.args.get('url')
     if url is None:
-    	return static_route()
+    	return catchall()
     if re.match("^https?://", url) is None:
     	url = "http://"+url
     content = subprocess.check_output(["wkhtmltopdf",url,'--run-script',munge,'-'])
     return flask.Response(content, mimetype='application/pdf')
 
-@app.route('/')
 @app.route('/<path:path>')
-def static_route(path="index.html"):
-	return flask.send_from_directory("static",path)
+def catchall(path=None):
+	return flask.redirect(catchall_redirect)
 
 if __name__ == "__main__":
     app.run()

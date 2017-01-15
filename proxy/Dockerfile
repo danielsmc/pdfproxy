@@ -17,8 +17,8 @@ RUN wget http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_linux-
     rm wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 
 
-ADD src /src
-WORKDIR /src
+ADD app.py /proxy/app.py
+WORKDIR /proxy
 
 RUN useradd -m myuser
 USER myuser
