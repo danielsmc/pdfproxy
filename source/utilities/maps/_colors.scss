@@ -81,8 +81,21 @@ $colors: (
 
 
     // Component --------------------------------------------------------------
-   c-icon: (
+    l-window: (
+       background-outer: #cfd6e1,
+       background-inner: #fefdfb,
+       border-outer: #cfd6e1,
+       border-inner: #404040
+    ),
+
+
+    // Component --------------------------------------------------------------
+    c-icon: (
        background-highlight: #205790,
        text-highlight: #ffffff
-   )
+    ),
+
+    c-window: (
+       label: #111111
+    )
 );

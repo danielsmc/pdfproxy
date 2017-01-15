@@ -13,7 +13,7 @@
     &__title {
         @include component-set-type-size();
 
-        font-size: em(20);
+        font-size: em(18);
         line-height: 1;
 
         cursor: default;
@@ -23,8 +23,28 @@
         height: rem(26);
         width: rem(26);
         position: relative;
-          bottom: rem(8);
+          bottom: rem(10);
 
         background-color: transparent;
+    }
+
+    &__file {
+// background-color: tomato;
+        margin: ms(1, rem);
+        width: 20%;
+        float: left;
+    }
+
+    &__thumbnail {
+        border: 10px solid white;
+        outline: 3px solid black;
+    }
+
+    &__link {
+        @include component-set-type-size();
+
+        color: c(c-window, label);
+        font-size: em(14);
+        text-decoration: none;
     }
 }
