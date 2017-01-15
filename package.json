@@ -1,13 +1,13 @@
 {
-  "name": "$$projectFullTitle",
-  "description": "$$projectFullDescription",
-  "homepage": "$$projectURL",
+  "name": "pdfproxy",
+  "description": "oh god, what have i done",
+  "homepage": "http://pdfinternet.biz",
   "version": "0.0.1",
-  "license": "$$projectLicense",
+  "license": "WTFPL",
   "author": {
-    "name": "$$projectAuthorEmail",
+    "name": "Daniel McLaughlinEmail",
     "email": "$$projectEmail",
-    "url": "$$projectAuthorURL"
+    "url": "Daniel McLaughlinURL"
   },
   "contributors": [
     {
@@ -27,8 +27,8 @@
     "COMMA SEPARATED LIST OF KEYWORDS"
   ],
   "bugs": {
-    "url": "https://github.com/$$githubAuthor/$$githubTitle/issues",
-    "email": "$$projectAuthorEmail"
+    "url": "https://github.com/danielsmc/pdfproxy/issues",
+    "email": "Daniel McLaughlinEmail"
   },
   "devDependencies": {
     "accessible-html-content-patterns": "^0.1.0",
@@ -110,6 +110,8 @@
     "clean-deploy-styles": "gulp clean-deploy-styles",
     "clean-screenshots": "gulp clean-screenshots",
     "browsersync-build": "gulp browsersync-build",
-    "browsersync-test": "gulp browsersync-test"
+    "browsersync-test": "gulp browsersync-test",
+    "config-make": "gulp config-make",
+    "config-apply": "gulp config-apply"
   }
 }
