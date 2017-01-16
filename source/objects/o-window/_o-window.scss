@@ -31,13 +31,13 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
     box-shadow: shadow(large) transparentize(c(base, type), 0.5);
 
     // Windows
-    &--open {
-        width: 77vw;
-        height: 80vh;
+    &--trash {
+        width: rem(450);
+        height: rem(260);
         position: absolute;
-          bottom: 8%;
-          right: 3%;
-        z-index: z(o-window);
+          top: 6%;
+          left: 3%;
+        z-index: z(o-window-trash);
     }
 
     &--pdf {
@@ -47,6 +47,15 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
           top: 3%;
           left: 10%;
         z-index: z(ceiling);
+    }
+
+    &--folder {
+        width: 77vw;
+        height: 80vh;
+        position: absolute;
+          bottom: 8%;
+          right: 3%;
+        z-index: z(o-window-folder);
     }
 
     // States
@@ -71,6 +80,8 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
         padding-top: rem(2);
 
         background-color: c(l-window, background-outer);
+
+        cursor: grab;
     }
 
     &__content {

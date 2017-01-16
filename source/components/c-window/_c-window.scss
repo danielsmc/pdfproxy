@@ -16,7 +16,7 @@ $c-window-alert-inset: ms(5, rem);
         font-size: em(18);
         line-height: 1;
 
-        cursor: default;
+        cursor: grab;
     }
 
     &__close {

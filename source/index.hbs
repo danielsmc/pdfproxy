@@ -34,6 +34,48 @@
 
 </main>
 
+<!-- Start of #garbage-window -->
+<aside
+    id="trash-window"
+    class="o-window o-window--trash"
+    role="complementary">
+
+    <div class="o-window__titlebar">
+        <h2 class="c-window__title">Garbage</h2>
+        {{>objects/o-window/o-window.titlebar}}
+    </div>
+
+    <div class="o-window__content">
+
+
+
+<table class="c-garbage-table">
+    <tbody>
+        <tr class="c-garbage-table__row">
+            <td scope="row"><a rel="external noopener" href="https://twitter.com/mclaughlin">@mclaughlin</a></td>
+            <td>Twitter</td>
+        </tr>
+        <tr>
+            <td scope="row"><a rel="external noopener" href="https://twitter.com/mclaughlin">@ericwbailey</a></td>
+            <td>Twitter</td>
+        </tr>
+        <tr class="c-garbage-table__row">
+            <td scope="row"><a rel="external noopener" href="https://tinyletter.com/hot-garbage">Fresh Garbage</a></td>
+            <td>Newsletter</td>
+        </tr>
+    </tbody>
+</table>
+
+
+    </div>
+
+    <div class="o-window__summary">
+        <p>7 files, 85.9 GB available</p>
+    </div>
+
+</aside>
+<!-- End of #garbage-window -->
+
 <!-- Start of #folder-window -->
 <aside
     id="folder-window"
@@ -41,12 +83,13 @@
     role="complementary"
     data-draggable>
 
-    <div class="o-window__titlebar" data-drag-handle>
-        {{>objects/o-window/o-window.titlebar.cat-pics}}
+    <div class="o-window__titlebar">
+        <h2 class="c-window__title">cat pics</h2>
+        {{>objects/o-window/o-window.titlebar}}
     </div>
 
     <div class="o-window__content">
-        {{>objects/o-window/o-window.files}}
+        {{>objects/o-window/o-window.cat-pics}}
     </div>
 
     <div class="o-window__summary">
