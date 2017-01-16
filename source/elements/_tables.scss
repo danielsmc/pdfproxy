@@ -49,16 +49,16 @@
 table {
     width: 100%;
 
-    caption {
-        @include typography-align(start);
-
-        margin-bottom: ms(1, em);
-    }
+    // caption {
+    //     @include typography-align(start);
+    //
+    //     margin-bottom: ms(1, em);
+    // }
 
     // Styles all table rows
-    tr {
-
-    }
+    // tr {
+    //
+    // }
 
     // Styles all table cells
     col,
@@ -68,39 +68,39 @@ table {
 
         padding: ms(0.25, em);
 
-        &[colspan] {
-            @include typography-align(center);
-        }
-
-        &[colspan="1"] {
-            @include table-col-align-text();
-        }
-
-        &[rowspan] {
-            vertical-align: middle;
-        }
-
-        &[rowspan="1"] {
-            vertical-align: top;
-        }
+        // &[colspan] {
+        //     @include typography-align(center);
+        // }
+        //
+        // &[colspan="1"] {
+        //     @include table-col-align-text();
+        // }
+        //
+        // &[rowspan] {
+        //     vertical-align: middle;
+        // }
+        //
+        // &[rowspan="1"] {
+        //     vertical-align: top;
+        // }
     }
 
-    colgroup {
+    // colgroup {
+    //
+    //     col {
+    //
+    //     }
+    // }
 
-        col {
-
-        }
-    }
-
-    thead {
-
-        tr {
-
-            th {
-
-            }
-        }
-    }
+    // thead {
+    //
+    //     tr {
+    //
+    //         th {
+    //
+    //         }
+    //     }
+    // }
 
     tbody {
         tr {
@@ -111,15 +111,15 @@ table {
         }
     }
 
-    tfoot {
-
-        tr {
-
-            td {
-                border-top: border(thinnest) solid c(base, type);
-            }
-        }
-    }
+    // tfoot {
+    //
+    //     tr {
+    //
+    //         td {
+    //             border-top: border(thinnest) solid c(base, type);
+    //         }
+    //     }
+    // }
 }
 
 
