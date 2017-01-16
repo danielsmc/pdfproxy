@@ -1,5 +1,3 @@
-# ⚠ THIS REPO IS STILL ACTIVELY BEING WORKED ON. DO NOT USE IN A PRODUCTION ENVIRONMENT ⚠
-
 # pdfproxy
 
 oh god, what have i done

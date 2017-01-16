@@ -4,31 +4,15 @@
   "homepage": "http://pdfinternet.biz",
   "version": "0.0.1",
   "license": "WTFPL",
-  "author": {
-    "name": "Daniel McLaughlinEmail",
-    "email": "$$projectEmail",
-    "url": "Daniel McLaughlinURL"
-  },
-  "contributors": [
-    {
-      "name": "",
-      "email": ""
-    },
-    {
-      "name": "",
-      "email": ""
-    }
-  ],
+  "author": "Dan McLaughlin <danielsmc@gmail.com> (http://danielmclaughl.in/)",
+  "contributors": "Eric Bailey <eric.w.bailey@gmail.com> (http://ericwbailey.com/)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/{{site.githubAuthor}}/{{site.githubTitle}}.git"
+    "url": "git://github.com/danielsmc/pdfproxy.git"
   },
-  "keywords": [
-    "COMMA SEPARATED LIST OF KEYWORDS"
-  ],
   "bugs": {
     "url": "https://github.com/danielsmc/pdfproxy/issues",
-    "email": "Daniel McLaughlinEmail"
+    "email": "danielsmc@gmail.com"
   },
   "devDependencies": {
     "accessible-html-content-patterns": "^0.1.0",

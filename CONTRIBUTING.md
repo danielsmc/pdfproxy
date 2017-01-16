@@ -10,7 +10,6 @@ Following these guidelines helps to communicate that you respect the time of the
     - [Terms of Use](#terms-of-use)
     - [Labeling](#labeling)
     - [Templates](#templates)
-    - [GitMagic](#gitmagic)
 - [Submitting Issues](#submitting-issues)
 - [Pull and Feature Requests](#pull-and-feature-requests)
     1. [Submitting Pull Requests](#submitting-pull-requests)
@@ -34,9 +33,6 @@ Labels will be updated throughout the submission process to reflect the submissi
 
 ### Templates
 This project uses templates for Issue and Pull Requests. Following the provided template helps the project maintainers have all the right details up front, which makes addressing feedback easier.
-
-### GitMagic
-This repo uses [GitMagic](https://gitmagic.io/) to help ensure that contributions are consistently formatted in a way that's easy to work with. The rules can be seen [here](https://github.com/danielsmc/pdfproxy/blob/master/contributing.json).
 
 
 ## Submitting Issues
