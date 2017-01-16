@@ -16,9 +16,9 @@ Array.prototype.forEach.call(document.querySelectorAll(".c-icon"), function(el) 
   });
 });
 
-Array.prototype.forEach.call(document.querySelectorAll(".c-window__close"), function(el) {
+Array.prototype.forEach.call(document.querySelectorAll("[data-window-close]"), function(el) {
+  var win = matchingParent(el,'.o-window');
   el.addEventListener("click", function(event) {
-    var win = el.parentElement.parentElement;
     win.className = win.className.replace(/\bo-window--open\b/g,"");
   });
 });
