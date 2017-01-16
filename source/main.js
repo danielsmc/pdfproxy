@@ -1,3 +1,14 @@
+(function() {
+'use strict';
+
+function matchingParent(el,sel) {
+  var cand = el;
+  while (!cand.matches(sel)) {
+    cand = cand.parentElement;
+  }
+  return cand;
+}
+
 Array.prototype.forEach.call(document.querySelectorAll(".c-icon"), function(el) {
   el.addEventListener("dblclick", function(event) {
     var win = el.id+"-window";
@@ -12,33 +23,29 @@ Array.prototype.forEach.call(document.querySelectorAll(".c-window__close"), func
   });
 });
 
-function makeDraggable(selector,grabber_selector) {
-  Array.prototype.forEach.call(document.querySelectorAll(selector), function(el) {
-    var graboffsetx, graboffsety, beingDragged=false;
-    var grabber_els = grabber_selector ? el.querySelectorAll(grabber_selector) : [el];
-    Array.prototype.forEach.call(grabber_els, function(grabber_el) {
-      grabber_el.addEventListener("mousedown", function(event) {
-        beingDragged = true;
-        var bounds = el.getBoundingClientRect();
-        var style = window.getComputedStyle(el);
-        graboffsetx = event.screenX - (bounds.left-parseFloat(style['margin-left']));
-        graboffsety = event.screenY - (bounds.top-parseFloat(style['margin-top']));
-      });
-      grabber_el.addEventListener("mouseup", function(event) {
-        beingDragged = false;
-      });
-      grabber_el.addEventListener("mousemove", function(event) {
-        beingDragged = beingDragged && ((event.buttons % 2) == 1);
-        if (beingDragged) {
-          el.style.position = "absolute";
-          el.style.left = "" + (event.screenX-graboffsetx) + "px";
-          el.style.top = "" + (event.screenY-graboffsety) + "px";
-        }
-      });
-    });
+var dragThis, graboffsetx, graboffsety;
+
+Array.prototype.forEach.call(document.querySelectorAll('[data-drag-handle]'), function(el) {
+  var draggable = matchingParent(el,"[data-draggable]");
+  el.addEventListener("mousedown", function(event) {
+    dragThis = draggable;
+    var bounds = draggable.getBoundingClientRect();
+    var style = window.getComputedStyle(draggable);
+    graboffsetx = event.screenX - (bounds.left-parseFloat(style['margin-left']));
+    graboffsety = event.screenY - (bounds.top-parseFloat(style['margin-top']));
   });
-}
+})
 
-makeDraggable(".c-icon");
-makeDraggable(".o-window",".o-window__titlebar");
+window.addEventListener("mousemove", function(event) {
+  if (dragThis) {
+    dragThis.style.position = "absolute";
+    dragThis.style.left = "" + (event.screenX-graboffsetx) + "px";
+    dragThis.style.top = "" + (event.screenY-graboffsety) + "px";
+  }
+});
 
+window.addEventListener("mouseup", function(event) {
+  dragThis = false;
+});
+
+})();
