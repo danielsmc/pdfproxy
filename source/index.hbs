@@ -28,6 +28,8 @@
     class="l-desktop"
     role="main">
 
+<h1 class="content-hide-visually">Desktop</h1>
+
 {{>layout/l-desktop/l-desktop}}
 
 </main>
@@ -39,7 +41,7 @@
     role="complementary">
 
     <div class="o-window__titlebar">
-        {{>objects/o-window/o-window.titlebar}}
+        {{>objects/o-window/o-window.titlebar.cat-pics}}
     </div>
 
     <div class="o-window__content">
@@ -49,9 +51,7 @@
     </div>
 
     <div class="o-window__summary">
-        <p>
-            7 files, 10 smokeybites
-        </p>
+        <p>7 files, 85.9 GB available</p>
     </div>
 
 </aside>
@@ -64,7 +64,7 @@
     role="complementary">
 
     <div class="o-window__titlebar">
-        <h1 class="c-window__title">Problem with Shortcut</h1>
+        <h2 class="c-window__title">Problem with Shortcut</h2>
 
         <button
             class="c-window__close">
@@ -85,7 +85,7 @@
             <input
                 class="c-window__input"
                 name="url"
-                placeholder="ex: http://www.google.com/">
+                placeholder="ex: https://en.wikipedia.org/wiki/PDF">
 
             <button
                 class="c-button c-button--primary"
