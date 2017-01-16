@@ -11,8 +11,10 @@ function matchingParent(el,sel) {
 
 Array.prototype.forEach.call(document.querySelectorAll(".c-icon"), function(el) {
   el.addEventListener("dblclick", function(event) {
-    var win = el.id+"-window";
-    document.getElementById(win).className += " o-window--open";
+    var win = document.getElementById(el.id+"-window");
+    if (win) {
+      win.className += " o-window--open";
+    }
   });
 });
 
