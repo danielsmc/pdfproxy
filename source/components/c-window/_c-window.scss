@@ -5,7 +5,7 @@
 
 
 // Component Logic ------------------------------------------------------------
-
+$c-window-alert-inset: ms(5, rem);
 
 
 // Component Styling ----------------------------------------------------------
@@ -71,6 +71,45 @@
 
         &:active {
             text-decoration: none;
+        }
+    }
+
+    &__alert-message {
+        margin: ms(0.5, rem) ms(2, rem) ms(1.25, rem) $c-window-alert-inset;
+
+        cursor: default;
+    }
+
+    &__input {
+        margin-left: $c-window-alert-inset;
+        width: ms(18, rem);
+    }
+
+    &__button {
+        @include component-size(ms(1.75, rem), ms(5, rem), ms(1.25, rem));
+
+        float: right;
+        margin-right: ms(1, rem);
+
+        border-radius: $global-border-radius;
+
+        color: white;
+
+        &:first-of-type {
+            margin-right: ms(1.25, rem);
+        }
+
+        // States
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &--primary {
+            background-color: c(c-window, button-primary-base);
+        }
+
+        &--secondary {
+            background-color: c(c-window, button-secondary-base);
         }
     }
 }

@@ -11,7 +11,7 @@ $toggle-forms-label-states: true;
 // Apply the `data-custom-select` attribute to a `<select>`'s label to remove
 // browser-generated select styling and replace it with your own styling
 // instructions
-$toggle-forms-custom-select: true;
+$toggle-forms-custom-select: false;
 
 
 // Form Logic -----------------------------------------------------------------
@@ -82,24 +82,24 @@ $form-single-line-input-height: ms(2, em);
 
 @mixin form-width() {
     display: block;
-    width: 100%;
+    // width: 100%;
 }
 
 
 // Form Containers ------------------------------------------------------------
-form {
-
-}
-
-
-fieldset {
-
-}
-
-
-legend {
-
-}
+// form {
+//
+// }
+//
+//
+// fieldset {
+//
+// }
+//
+//
+// legend {
+//
+// }
 
 
 // Form Labels ----------------------------------------------------------------
@@ -160,311 +160,309 @@ input {
     }
 
     // Input types
-    &[type="color"] {
-        height: $form-single-line-input-height;
-
-        background-color: c(base, background);
-
-        // REVIEW: Double-check these values if adjusting input heights
-        &::-webkit-color-swatch-wrapper {
-            @include component-remove-margin-padding();
-
-            height: em(25);
-            position: relative;
-              top: em(-3);
-
-            border: 0;
-
-            background-color: c(base, background);
-        }
-    }
-
-    &[type="date"] {
-
-    }
-
-    &[type="email"] {
-
-    }
-
-    &[list] {
-
-    }
-
-    &[type="month"] {
-
-    }
-
-    &[type="number"] {
-
-    }
-
-    &[type="password"] {
-        @include typography-tracking(loose);
-    }
-
-    &[type="range"] {
-        margin-top: ms(0.75, em); // REVIEW: Set to three quarters of `$form-label-distance`
-        margin-bottom: ms(0.5, em); // Gives range input a little breathing room
-    }
-
-    &[type="search"] {
-
-    }
-
-    &[type="tel"] {
-
-    }
-
-    &[type="text"] {
-
-    }
-
-    &[type="time"] {
-
-    }
-
-    &[type="url"] {
-
-    }
-
-    &[type="week"] {
-
-    }
-
-
+    // &[type="color"] {
+    //     height: $form-single-line-input-height;
+    //
+    //     background-color: c(base, background);
+    //
+    //     // REVIEW: Double-check these values if adjusting input heights
+    //     &::-webkit-color-swatch-wrapper {
+    //         @include component-remove-margin-padding();
+    //
+    //         height: em(25);
+    //         position: relative;
+    //           top: em(-3);
+    //
+    //         border: 0;
+    //
+    //         background-color: c(base, background);
+    //     }
+    // }
+    //
+    // &[type="date"] {
+    //
+    // }
+    //
+    // &[type="email"] {
+    //
+    // }
+    //
+    // &[list] {
+    //
+    // }
+    //
+    // &[type="month"] {
+    //
+    // }
+    //
+    // &[type="number"] {
+    //
+    // }
+    //
+    // &[type="password"] {
+    //     @include typography-tracking(loose);
+    // }
+    //
+    // &[type="range"] {
+    //     margin-top: ms(0.75, em); // REVIEW: Set to three quarters of `$form-label-distance`
+    //     margin-bottom: ms(0.5, em); // Gives range input a little breathing room
+    // }
+    //
+    // &[type="search"] {
+    //
+    // }
+    //
+    // &[type="tel"] {
+    //
+    // }
+    //
+    // &[type="text"] {
+    //
+    // }
+    //
+    // &[type="time"] {
+    //
+    // }
+    //
+    // &[type="url"] {
+    //
+    // }
+    //
+    // &[type="week"] {
+    //
+    // }
 }
 
-textarea {
-    @include form-border();
-    @include form-multi-line-input;
-    @include form-states(input);
-    @include form-width();
-
-    margin-top: $form-label-distance;
-    overflow: auto;
-    padding: $form-input-padding;
-
-    resize: vertical;
-}
+// textarea {
+//     @include form-border();
+//     @include form-multi-line-input;
+//     @include form-states(input);
+//     @include form-width();
+//
+//     margin-top: $form-label-distance;
+//     overflow: auto;
+//     padding: $form-input-padding;
+//
+//     resize: vertical;
+// }
 
 
 // Text-based Inputs ----------------------------------------------------------
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="url"],
-input[type="tel"],
-input[type="number"],
-input[type="search"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input datalist {
-
-}
+// input[type="text"],
+// input[type="email"],
+// input[type="password"],
+// input[type="url"],
+// input[type="tel"],
+// input[type="number"],
+// input[type="search"],
+// input[type="date"],
+// input[type="month"],
+// input[type="time"],
+// input[type="week"],
+// input datalist {
+//
+// }
 
 
 // Non-text-based Inputs ------------------------------------------------------
-input[type="color"],
-input[type="file"],
-input[type="range"] {
+// input[type="color"],
+// input[type="file"],
+// input[type="range"] {
+//
+// }
 
-}
 
-
-input[type="color"] {
-
-}
+// input[type="color"] {
+//
+// }
 
 
 // http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
-input[type="file"] {
-    background-color: c(base, background);
-}
+// input[type="file"] {
+//     background-color: c(base, background);
+// }
 
 
-input[type="range"] {
-
-}
+// input[type="range"] {
+//
+// }
 
 
 // Select Inputs --------------------------------------------------------------
-select {
-    @include form-border();
-    @include form-states(input);
-    @include form-width();
-
-    height: $form-single-line-input-height;
-    margin-top: $form-label-distance;
-    padding: $form-input-padding;
-
-    background-color: c(base, background);
-
-    &[multiple] {
-        @include form-multi-line-input;
-
-        padding: 0; // Undoes `$form-input-padding` so <option>s extend full-width
-
-        option {
-            padding: ms(0.4, em); // Highlights entire <option> row when selected
-        }
-    }
-
-    @if $toggle-forms-custom-select == true {
-        border-radius: 0;
-
-        -webkit-appearance: none;
-        -moz-appearance: none;
-    }
-}
-
-
-select optgroup {
-    margin-top: 0;  // Undoes lobotomoized owl selector
-
-    font-weight: $font-weight-bold; // Creates distinction between optgroup and option
-}
+// select {
+//     @include form-border();
+//     @include form-states(input);
+//     @include form-width();
+//
+//     height: $form-single-line-input-height;
+//     margin-top: $form-label-distance;
+//     padding: $form-input-padding;
+//
+//     background-color: c(base, background);
+//
+//     &[multiple] {
+//         @include form-multi-line-input;
+//
+//         padding: 0; // Undoes `$form-input-padding` so <option>s extend full-width
+//
+//         option {
+//             padding: ms(0.4, em); // Highlights entire <option> row when selected
+//         }
+//     }
+//
+//     @if $toggle-forms-custom-select == true {
+//         border-radius: 0;
+//
+//         -webkit-appearance: none;
+//         -moz-appearance: none;
+//     }
+// }
 
 
-select option {
-    margin-top: 0; // Undoes lobotomoized owl selector
+// select optgroup {
+//     margin-top: 0;  // Undoes lobotomoized owl selector
+//
+//     font-weight: $font-weight-bold; // Creates distinction between optgroup and option
+// }
 
-    font-weight: $font-weight-normal; // Creates distinction between optgroup and option
-}
+
+// select option {
+//     margin-top: 0; // Undoes lobotomoized owl selector
+//
+//     font-weight: $font-weight-normal; // Creates distinction between optgroup and option
+// }
 
 
 // Checkboxes and Radios ------------------------------------------------------
-input {
+// input {
+//
+//     &[type="checkbox"],
+//     &[type="radio"] {
+//         margin-right: ms(0.3, em);
+//
+//         line-height: 1;
+//     }
+// }
 
-    &[type="checkbox"],
-    &[type="radio"] {
-        margin-right: ms(0.3, em);
+// input[type="checkbox"] {
+//
+// }
 
-        line-height: 1;
-    }
-}
-
-input[type="checkbox"] {
-
-}
-
-input[type="radio"] {
-
-}
+// input[type="radio"] {
+//
+// }
 
 
 // Output ---------------------------------------------------------------------
 // http://thenewcode.com/875/Using-the-HTML5-meter-Element
 // https://css-tricks.com/html5-meter-element/
-progress,
-meter {
-    @include form-width();
-
-    background: c(form, busy);
-
-    // Bar
-    &::-webkit-progress-value { background: c(form, active); }
-    &::-webkit-meter-optimum-value { background: c(form, active); }
-    &::-webkit-meter-suboptimum-value { background: c(form, active); }
-    &::-webkit-meter-even-less-good-value { background: c(form, active); }
-
-    &::-moz-meter-bar { background: c(form, active); }
-    &::-moz-meter-optimum { background: c(form, active); }
-    &::-moz-meter-sub-optimum { background: c(form, active); }
-    &::-moz-meter-sub-sub-optimum { background: c(form, active); }
-
-    // Background
-    &::-webkit-progress-bar,
-    &::-webkit-meter-bar {
-        background: c(form, busy);
-    }
-
-}
+// progress,
+// meter {
+//     @include form-width();
+//
+//     background: c(form, busy);
+//
+//     // Bar
+//     &::-webkit-progress-value { background: c(form, active); }
+//     &::-webkit-meter-optimum-value { background: c(form, active); }
+//     &::-webkit-meter-suboptimum-value { background: c(form, active); }
+//     &::-webkit-meter-even-less-good-value { background: c(form, active); }
+//
+//     &::-moz-meter-bar { background: c(form, active); }
+//     &::-moz-meter-optimum { background: c(form, active); }
+//     &::-moz-meter-sub-optimum { background: c(form, active); }
+//     &::-moz-meter-sub-sub-optimum { background: c(form, active); }
+//
+//     // Background
+//     &::-webkit-progress-bar,
+//     &::-webkit-meter-bar {
+//         background: c(form, busy);
+//     }
+//
+// }
 
 // Overrides Firefox's progress bar styling
-*::-moz-progress-bar { background: c(form, active); }
-*::-moz-meter-optimum::-moz-meter-bar { background: c(form, active); }
-*::-moz-meter-sub-optimum::-moz-meter-bar { background: c(form, active); }
-*::-moz-meter-sub-sub-optimum::-moz-meter-bar { background: c(form, active); }
+// *::-moz-progress-bar { background: c(form, active); }
+// *::-moz-meter-optimum::-moz-meter-bar { background: c(form, active); }
+// *::-moz-meter-sub-optimum::-moz-meter-bar { background: c(form, active); }
+// *::-moz-meter-sub-sub-optimum::-moz-meter-bar { background: c(form, active); }
 
 
 
-progress {
-
-}
-
-
-meter {
-
-}
-
-output {
-    @include typography-tracking(slight);
-
-    margin-left: em(2);
-    margin-right: em(2);
-    padding-left: em(4);
-    padding-right: em(4);
-
-    font-family: $font-family-code;
-    line-height: $global-type-line-height;
-}
+// progress {
+//
+// }
+//
+//
+// meter {
+//
+// }
+//
+// output {
+//     @include typography-tracking(slight);
+//
+//     margin-left: em(2);
+//     margin-right: em(2);
+//     padding-left: em(4);
+//     padding-right: em(4);
+//
+//     font-family: $font-family-code;
+//     line-height: $global-type-line-height;
+// }
 
 
 // Validation -----------------------------------------------------------------
-input[aria-invalid="false"] {
-
-}
-
-
-input[aria-invalid="true"] {
-
-}
-
-
-input[autosave] {
-
-}
+// input[aria-invalid="false"] {
+//
+// }
+//
+//
+// input[aria-invalid="true"] {
+//
+// }
+//
+//
+// input[autosave] {
+//
+// }
 
 
 // Disabled input should be immutable. `!important` overrides the `input:not()`
 // selector above
-input[disabled] {
-    border-color: transparentize(c(form, base), 0.5) !important;
-
-    background-color: transparentize(c(base, background), 0.5) !important;
-
-    color: transparentize(c(base, type), 0.5) !important;
-
-    &:hover,
-    &:active,
-    &focus {
-        border-color: transparentize(c(form, base), 0.5) !important;
-
-        background-color: transparentize(c(base, background), 0.5) !important;
-
-        color: transparentize(c(base, type), 0.5) !important;
-    }
-}
-
-
-input[minlength] {
-
-}
+// input[disabled] {
+//     border-color: transparentize(c(form, base), 0.5) !important;
+//
+//     background-color: transparentize(c(base, background), 0.5) !important;
+//
+//     color: transparentize(c(base, type), 0.5) !important;
+//
+//     &:hover,
+//     &:active,
+//     &focus {
+//         border-color: transparentize(c(form, base), 0.5) !important;
+//
+//         background-color: transparentize(c(base, background), 0.5) !important;
+//
+//         color: transparentize(c(base, type), 0.5) !important;
+//     }
+// }
 
 
-input[maxlength] {
-
-}
-
-
-input[readonly] {
-
-}
-
-
-input[required] {
-
-}
+// input[minlength] {
+//
+// }
+//
+//
+// input[maxlength] {
+//
+// }
+//
+//
+// input[readonly] {
+//
+// }
+//
+//
+// input[required] {
+//
+// }

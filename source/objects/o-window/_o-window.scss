@@ -36,13 +36,29 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
         width: 77vw;
         height: 80vh;
         position: absolute;
-          bottom: 50px;
-          right: 50px;
+          bottom: 8%;
+          right: 3%;
+    }
+
+    &--pdf {
+        width: rem(550);
+        height: rem(280);
+        position: absolute;
+          top: 7%;
+          left: 10%;
     }
 
     // States
     &--open {
         display: flex;
+    }
+
+    &--alert {
+        background-color: #cfd6e1;
+        background-image: url(images/objects/o-window/alert.png);
+        background-repeat: no-repeat;
+        background-position: top rem(10) left rem(20);
+        background-size: rem(70);
     }
 
     &__titlebar {

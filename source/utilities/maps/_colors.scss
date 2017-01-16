@@ -72,11 +72,11 @@ $colors: (
 
     // Forms ------------------------------------------------------------------
     form: (
-        base:   #0074d9,
-        hover:  #7fdbff,
-        focus:  #ff851b,
-        active: #ff4136,
-        busy:   #dddddd
+        base:   #879caa,
+        hover:  #738591,
+        focus:  #111111,
+        active: #111111,
+        busy:   #879caa
     ),
 
 
@@ -97,6 +97,8 @@ $colors: (
 
     c-window: (
        border: #879caa,
+       button-primary-base: #205790,
+       button-secondary-base: #879caa,
        label: #111111
     )
 );
