@@ -9,16 +9,20 @@ function matchingParent(el,sel) {
   return cand;
 }
 
-Array.prototype.forEach.call(document.querySelectorAll(".c-icon"), function(el) {
-  el.addEventListener("dblclick", function(event) {
-    var win = document.getElementById(el.id+"-window");
-    if (win) {
+function qsForEach(sel,fn) {
+  Array.prototype.forEach.call(document.querySelectorAll(sel),fn);
+}
+
+qsForEach(".c-icon", function(el) {
+  var win = document.getElementById(el.id+"-window");
+  if (win) {
+    el.addEventListener("dblclick", function(event) {
       win.className += " o-window--open";
-    }
-  });
+    });
+  }
 });
 
-Array.prototype.forEach.call(document.querySelectorAll("[data-window-close]"), function(el) {
+qsForEach("[data-window-close]", function(el) {
   var win = matchingParent(el,'.o-window');
   el.addEventListener("click", function(event) {
     win.className = win.className.replace(/\bo-window--open\b/g,"");
@@ -27,7 +31,7 @@ Array.prototype.forEach.call(document.querySelectorAll("[data-window-close]"), f
 
 var dragThis, graboffsetx, graboffsety;
 
-Array.prototype.forEach.call(document.querySelectorAll('[data-drag-handle]'), function(el) {
+qsForEach('[data-drag-handle]', function(el) {
   var draggable = matchingParent(el,"[data-draggable]");
   el.addEventListener("mousedown", function(event) {
     dragThis = draggable;
@@ -50,7 +54,7 @@ window.addEventListener("mouseup", function(event) {
   dragThis = false;
 });
 
-Array.prototype.forEach.call(document.querySelectorAll('[data-drag-handle] img'), function(img) {
+qsForEach('[data-drag-handle] img', function(img) {
   img.addEventListener("dragstart", function(e) { e.preventDefault(); });
 });
 
