@@ -48,4 +48,8 @@ window.addEventListener("mouseup", function(event) {
   dragThis = false;
 });
 
+Array.prototype.forEach.call(document.querySelectorAll('[data-drag-handle] img'), function(img) {
+  img.addEventListener("dragstart", function(e) { e.preventDefault(); });
+});
+
 })();
