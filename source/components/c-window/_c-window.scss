@@ -91,4 +91,26 @@ $c-window-alert-inset: ms(5, rem);
         margin-left: $c-window-alert-inset;
         width: ms(18, rem);
     }
+
+    &__hint {
+        @include component-set-type-size();
+
+        display: block;
+        margin-top: ms(0.5, rem);
+        margin-left: $c-window-alert-inset;
+
+        color: c(base, type);
+        font-size: em(15);
+        text-decoration: none;
+
+        // States
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &:active {
+            text-decoration: none;
+        }
+    }
 }

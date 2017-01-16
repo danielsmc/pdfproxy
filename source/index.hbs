@@ -45,9 +45,7 @@
     </div>
 
     <div class="o-window__content">
-        <ol class="o-window__files">
-            {{>objects/o-window/o-window.files}}
-        </ol>
+        {{>objects/o-window/o-window.files}}
     </div>
 
     <div class="o-window__summary">
@@ -84,8 +82,13 @@
 
             <input
                 class="c-window__input"
-                name="url"
-                placeholder="ex: https://en.wikipedia.org/wiki/PDF">
+                name="url">
+            <a
+                href="https://ancient-cove-23618.herokuapp.com/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FPDF"
+                class="c-window__hint"
+                rel="external noopener">
+                Try https://en.wikipedia.org/wiki/PDF
+            </a>
 
             <button
                 class="c-button c-button--primary"

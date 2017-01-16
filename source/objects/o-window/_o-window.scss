@@ -42,9 +42,9 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
 
     &--pdf {
         width: rem(550);
-        height: rem(280);
+        height: rem(300);
         position: absolute;
-          top: 7%;
+          top: 3%;
           left: 10%;
         z-index: z(ceiling);
     }

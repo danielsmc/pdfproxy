@@ -10,19 +10,15 @@
 
 // Component Styling ----------------------------------------------------------
 .c-icon {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     height: rem(120);
     margin: ms(1, rem);
     width: rem(120);
-    z-index: z(c-icon);
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 
     background-color: transparent;
-    background-position: center top;
-    background-size: 75%;
-    background-repeat: no-repeat;
 
     // States
     &:hover {
@@ -38,24 +34,20 @@
         color: c(highlight, text);
     }
 
+    &__image {
+        height: rem(80);
+        margin-top: ms(0.25, rem);
+        width: rem(80);
+
+        background-color: transparent;
+    }
+
     &__label {
-    }
-
-    &--computer {
-        background-image: url(images/components/c-icon/computer.png);
-    }
-
-    &--garbage {
-        background-image: url(images/components/c-icon/garbage.png);
-    }
-
-    &--cat-pics {
-        background-image: url(images/components/c-icon/folder.png);
+        line-height: 1;
+        margin-top: ms(0.5, rem);
     }
 
     &--pdf {
-        background-image: url(images/components/c-icon/pdf.png);
-
         position: absolute;
         top: ms(4, rem);
         left: 30%;
