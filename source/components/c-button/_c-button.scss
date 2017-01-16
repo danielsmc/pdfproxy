@@ -1,0 +1,38 @@
+// ============================================================================
+// Component
+// Button
+// ============================================================================
+
+
+// Component Logic ------------------------------------------------------------
+
+
+
+// Component Styling ----------------------------------------------------------
+.c-button {
+    @include component-size(ms(1.75, rem), ms(5, rem), ms(1.25, rem));
+
+    float: right;
+    margin-right: ms(1, rem);
+
+    border-radius: $global-border-radius;
+
+    color: c(button, text);
+
+    &:first-of-type {
+        margin-right: ms(1.25, rem);
+    }
+
+    // States
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &--primary {
+        background-color: c(button, background-primary);
+    }
+
+    &--secondary {
+        background-color: c(button, background-secondary);
+    }
+}

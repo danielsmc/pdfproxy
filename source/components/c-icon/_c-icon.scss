@@ -31,11 +31,11 @@
 
     &:active,
     &:focus {
-        outline: $global-border-radius solid c(c-icon, background-highlight);
+        outline: $global-border-radius solid c(highlight, background);
 
-        background-color: c(c-icon, background-highlight);
+        background-color: c(highlight, background);
 
-        color: c(c-icon, text-highlight);
+        color: c(highlight, text);
     }
 
     &__label {

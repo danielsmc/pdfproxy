@@ -50,6 +50,12 @@ $colors: (
         busy:    #dddddd
     ),
 
+    // Highlights -------------------------------------------------------------
+    highlight: (
+        background: #205790,
+        text:  #ffffff
+    ),
+
 
     // Headings ---------------------------------------------------------------
     heading: (
@@ -61,12 +67,9 @@ $colors: (
 
     // Buttons ----------------------------------------------------------------
     button: (
-        type:   #ffffff,
-        base:   #0074d9,
-        hover:  #7fdbff,
-        focus:  #ff851b,
-        active: #ff4136,
-        busy:   #dddddd
+        text:                 #ffffff,
+        background-primary:   #0074d9,
+        background-secondary: #879caa,
     ),
 
 
@@ -91,8 +94,8 @@ $colors: (
 
     // Component --------------------------------------------------------------
     c-icon: (
-       background-highlight: #205790,
-       text-highlight: #ffffff
+       highlight-background: #205790,
+       highlight-text: #ffffff
     ),
 
     c-window: (

@@ -22,7 +22,6 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
 
     flex-direction: column;
     justify-content: space-between;
-    z-index: z(ceiling);
 
     border-right: $o-window-outer-border;
     border-left: $o-window-outer-border;
@@ -38,6 +37,7 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
         position: absolute;
           bottom: 8%;
           right: 3%;
+        z-index: z(o-window);
     }
 
     &--pdf {
@@ -46,6 +46,7 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
         position: absolute;
           top: 7%;
           left: 10%;
+        z-index: z(ceiling);
     }
 
     // States
@@ -92,6 +93,7 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
 
         border-top: 1px solid c(l-window, border-inner);
 
+        color: lighten(c(base, type), 30%);
         font-size: em(11);
 
         cursor: default;
