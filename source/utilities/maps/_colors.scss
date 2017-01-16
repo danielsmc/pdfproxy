@@ -82,10 +82,10 @@ $colors: (
 
     // Component --------------------------------------------------------------
     l-window: (
-       background-outer: #cfd6e1,
        background-inner: #fefdfb,
-       border-outer: #cfd6e1,
-       border-inner: #404040
+       background-outer: #cfd6e1,
+       border-inner: #879caa,
+       border-outer: #cfd6e1
     ),
 
 
@@ -96,6 +96,7 @@ $colors: (
     ),
 
     c-window: (
+       border: #879caa,
        label: #111111
     )
 );

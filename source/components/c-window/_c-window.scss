@@ -25,26 +25,52 @@
         position: relative;
           bottom: rem(10);
 
+        outline: none;
+
         background-color: transparent;
+
+        // Icon
+        svg {
+            &:active,
+            &:focus {
+                fill: white;
+            }
+        }
     }
 
     &__file {
 // background-color: tomato;
+        display: flex;
+        flex-direction: column;
         margin: ms(1, rem);
-        width: 20%;
+        width: rem(100);
         float: left;
     }
 
     &__thumbnail {
-        border: 10px solid white;
-        outline: 3px solid black;
+        border: rem(4) solid white;
+        outline: 1px solid c(c-window, border);
+        margin-bottom: rem(6);
     }
 
     &__link {
         @include component-set-type-size();
 
+        outline: none;
+
         color: c(c-window, label);
         font-size: em(14);
+        text-align: center;
         text-decoration: none;
+
+        // States
+        &:focus,
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:active {
+            text-decoration: none;
+        }
     }
 }

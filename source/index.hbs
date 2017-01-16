@@ -24,58 +24,26 @@
 </div>
 <!-- End of Icon Sprite -->
 
-<main class="l-desktop">
+<main
+    class="l-desktop"
+    role="main">
 
-<button
-    id="computer"
-    class="c-icon c-icon--computer">
-    <span class="c-icon__label">Computer</span>
-</button>
-
-<button
-    id="trash"
-    class="c-icon c-icon--garbage">
-    <span class="c-icon__label">Garbage</span>
-</button>
-
-<button
-    id="folder"
-    class="c-icon c-icon--cat-pics">
-    <span class="c-icon__label">Cat Pics</span>
-</button>
-
-<button
-    id="pdf"
-    class="c-icon c-icon--pdf">
-    <span class="c-icon__label">internet.pdf</span>
-</button>
+{{>layout/l-desktop/l-desktop}}
 
 </main>
 
 <div class="o-window" id="folder-window">
     <div class="o-window__titlebar">
-        <h1 class="c-window__title">Cat Pics</h1>
 
-        <button
-            class="c-window__close">
-            <svg height="14" width="14" aria-hidden="true" viewBox="0 0 100 100" class="icon"><use xlink:href="#icon-close"></use></svg>
-        </button>
+        {{>objects/o-window/o-window.titlebar}}
+
     </div>
 
     <div class="o-window__content">
         <ol class="o-window__files">
-            <li class="c-window__file">
-                <a class="c-window__link" href="#">
-                    <img class="c-window__thumbnail" src="images/components/c-window/smokeythumb.jpg" alt="">
-                    smokey-01.jpg
-                </a>
-            </li>
-            <li class="c-window__file">
-                <a class="c-window__link" href="#">
-                    <img src="images/components/c-window/smokeythumb.jpg" alt="">
-                    02.jpg
-                </a>
-            </li>
+
+            {{>objects/o-window/o-window.files}}
+
         </ol>
     </div>
 

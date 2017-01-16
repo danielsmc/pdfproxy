@@ -5,7 +5,7 @@
 
 
 // Object Logic ---------------------------------------------------------------
-$o-window-outer-border: 10px solid c(l-window, border-outer);
+$o-window-outer-border: rem(7) solid c(l-window, border-outer);
 
 @mixin o-window-background() {
     background: #cfd6e1;
@@ -37,7 +37,7 @@ $o-window-outer-border: 10px solid c(l-window, border-outer);
     border-radius: $global-border-radius $global-border-radius 0 0;
 
     background-color: c(l-window, background-inner);
-    box-shadow: 0px 5px 12px 0px transparentize(#111111, 0.5);
+    box-shadow: shadow(large) transparentize(c(base, type), 0.5);
 
     &__titlebar {
         @include o-window-background();
@@ -54,7 +54,7 @@ $o-window-outer-border: 10px solid c(l-window, border-outer);
         @include content-delobotomize();
 
         flex-grow: 1;
-        padding: ms(0.75, rem);
+        padding: ms(0.5, rem);
 
         border-top: 2px solid c(l-window, border-inner);
     }
@@ -76,7 +76,6 @@ $o-window-outer-border: 10px solid c(l-window, border-outer);
     }
 
     &__files {
-        // display: flex;
         list-style-type: none;
     }
 }
