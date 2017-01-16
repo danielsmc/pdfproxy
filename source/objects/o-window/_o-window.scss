@@ -18,19 +18,11 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
 
 // Object Styling -------------------------------------------------------------
 .o-window {
-    display: none;
+    @include content-hide(remove);
+
     flex-direction: column;
     justify-content: space-between;
-    width: 77vw;
-    height: 80vh;
-    position: absolute;
-      bottom: 50px;
-      right: 50px;
     z-index: z(ceiling);
-
-    &--open {
-        display: flex;
-    }
 
     border-right: $o-window-outer-border;
     border-left: $o-window-outer-border;
@@ -38,6 +30,20 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
 
     background-color: c(l-window, background-inner);
     box-shadow: shadow(large) transparentize(c(base, type), 0.5);
+
+    // Windows
+    &--open {
+        width: 77vw;
+        height: 80vh;
+        position: absolute;
+          bottom: 50px;
+          right: 50px;
+    }
+
+    // States
+    &--open {
+        display: flex;
+    }
 
     &__titlebar {
         @include o-window-background();
