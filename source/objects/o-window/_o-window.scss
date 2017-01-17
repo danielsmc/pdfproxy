@@ -5,7 +5,7 @@
 
 
 // Object Logic ---------------------------------------------------------------
-$o-window-outer-border: rem(7) solid c(l-window, border-outer);
+$o-window-outer-border: border(thickest) solid c(l-window, border-outer);
 
 @mixin o-window-background() {
     background: #cfd6e1;

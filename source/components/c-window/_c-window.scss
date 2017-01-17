@@ -49,7 +49,7 @@ $c-window-alert-inset: ms(5, rem);
     &__thumbnail {
         margin-bottom: rem(6);
 
-        border: rem(4) solid white;
+        border: border(thicker) solid white;
         outline: 1px solid c(c-window, border);
     }
 
