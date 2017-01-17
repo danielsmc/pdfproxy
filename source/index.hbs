@@ -38,9 +38,10 @@
 <aside
     id="trash-window"
     class="o-window o-window--trash"
-    role="complementary">
+    role="complementary"
+    data-draggable>
 
-    <div class="o-window__titlebar">
+    <div class="o-window__titlebar" data-drag-handle>
         <h2 class="c-window__title">Garbage</h2>
         {{>objects/o-window/o-window.titlebar}}
     </div>
@@ -63,7 +64,7 @@
     role="complementary"
     data-draggable>
 
-    <div class="o-window__titlebar">
+    <div class="o-window__titlebar" data-drag-handle>
         <h2 class="c-window__title">cat pics</h2>
         {{>objects/o-window/o-window.titlebar}}
     </div>
