@@ -38,6 +38,29 @@
 
 <!-- Start of #garbage-window -->
 <aside
+    id="computer-window"
+    class="o-window o-window--computer"
+    role="complementary"
+    data-draggable>
+
+    <div class="o-window__titlebar" data-drag-handle>
+        <h2 class="c-window__title">Computer</h2>
+        {{>objects/o-window/o-window.titlebar}}
+    </div>
+
+    <div class="o-window__content">
+        {{>objects/o-window/o-window.computer}}
+    </div>
+
+    <div class="o-window__summary">
+        <p>3 files, 34.9 MB available</p>
+    </div>
+
+</aside>
+<!-- End of #garbage-window -->
+
+<!-- Start of #garbage-window -->
+<aside
     id="trash-window"
     class="o-window o-window--trash"
     role="complementary"
@@ -53,7 +76,7 @@
     </div>
 
     <div class="o-window__summary">
-        <p>3 files, 85.9 GB available</p>
+        <p>3 files, 34.9 MB available</p>
     </div>
 
 </aside>
@@ -76,7 +99,7 @@
     </div>
 
     <div class="o-window__summary">
-        <p>7 files, 85.9 GB available</p>
+        <p>7 files, 34.9 MB available</p>
     </div>
 
 </aside>
