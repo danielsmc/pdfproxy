@@ -15,9 +15,11 @@ function qsForEach(sel,fn) {
 
 qsForEach(".c-icon", function(el) {
   var win = document.getElementById(el.id+"-window");
+  var sound = document.getElementById(el.dataset.clickSound);
   if (win) {
     el.addEventListener("dblclick", function(event) {
       win.className += " o-window--open";
+      if (sound) sound.play();
     });
   }
 });
