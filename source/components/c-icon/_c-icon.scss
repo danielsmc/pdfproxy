@@ -11,6 +11,7 @@
 // Component Styling ----------------------------------------------------------
 .c-icon {
     @include component-size(rem(120), rem(120), null);
+    @include content-no-select();
 
     align-items: center;
     display: flex;

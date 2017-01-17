@@ -12,6 +12,7 @@ $c-window-alert-inset: ms(5, rem);
 .c-window {
     &__title {
         @include component-set-type-size();
+        @include content-no-select();
 
         font-size: em(18);
         line-height: 1;
@@ -40,6 +41,7 @@ $c-window-alert-inset: ms(5, rem);
 
     &__file {
         @include component-align(float, start);
+        @include content-no-select();
 
         display: flex;
         flex-direction: column;
