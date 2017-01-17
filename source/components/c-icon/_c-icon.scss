@@ -10,15 +10,17 @@
 
 // Component Styling ----------------------------------------------------------
 .c-icon {
-    height: rem(120);
-    margin: ms(1, rem);
-    width: rem(120);
+    @include component-size(rem(120), rem(120), null);
+    @include content-no-select();
 
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin: ms(1, rem);
 
     background-color: transparent;
+
+    text-align: inherit;
 
     // States
     &:hover {
@@ -35,21 +37,20 @@
     }
 
     &__image {
-        height: rem(80);
-        margin-top: ms(0.25, rem);
-        width: rem(80);
+        @include component-size(rem(80), rem(80), ms(0.25, rem));
 
         background-color: transparent;
     }
 
     &__label {
-        line-height: 1;
         margin-top: ms(0.5, rem);
+
+        line-height: 1;
     }
 
     &--pdf {
         position: absolute;
-        top: ms(4, rem);
-        left: 30%;
+          top: ms(4, rem);
+          left: 30%;
     }
 }

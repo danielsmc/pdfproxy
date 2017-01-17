@@ -10,9 +10,9 @@
 
 // Component Styling ----------------------------------------------------------
 .c-button {
+    @include component-align(float, end);
     @include component-size(ms(1.75, rem), ms(5, rem), ms(1.25, rem));
 
-    float: right;
     margin-right: ms(1, rem);
 
     border-radius: $global-border-radius;
