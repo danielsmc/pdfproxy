@@ -22,10 +22,11 @@
 
     td {
         padding: em(10);
-        border-color: #cfd6e1;
+
+        border-color: c(c-garbage-table, border);
 
         &[scope="row"] {
-            @include table-col-width-60();
+            @include table-col-width-66();
         }
     }
 
@@ -38,7 +39,7 @@
         &--twitter {
             top: rem(6);
 
-            fill: #059FF5;
+            fill: c(c-garbage-table, twitter);
         }
 
         &--fresh-garbage {
