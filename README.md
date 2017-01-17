@@ -1,4 +1,4 @@
-# pdfproxy
+# [pdfproxy](URL)
 
 The internet is a document delivery service.
 
@@ -12,7 +12,9 @@ The internet is a document delivery service.
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists. 
+Finally, a chance show Aunt Gladys what "that awful internet" would be like if it was more easy to understand. Like a book! Or maybe a newspaper! Your grandfather, god rest his soul, loved reading those!
+
+After unearthing a copy of VaporSoft's DocuOS™ and getting it to run in a browser, we we were able to take advantage of the PDF file format's unique properties and place the internet in a PDF for you to use! Unfortunately, the way the technology works means that you have to [supply the initial URL yourself](URL).
 
 
 ## Installation
@@ -35,4 +37,6 @@ Contributions are welcome! Check out the [contributing guidelines](https://githu
 
 ## License
 
-[WTFPL](https://raw.githubusercontent.com/danielsmc/pdfproxy/master/LICENSE)
+[WTFPL](https://raw.githubusercontent.com/danielsmc/pdfproxy/master/LICENSE).
+
+[Crystal Project Icons](https://github.com/thecodingmachine/crystal-project) licensed under the [GNU Lesser General Public License](https://www.gnu.org/licenses/lgpl-3.0.en.html).
