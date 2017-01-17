@@ -58,12 +58,12 @@ $c-window-alert-inset: ms(5, rem);
 
     &__link {
         @include component-set-type-size();
+        @include typography-align(center);
 
         outline: none;
 
         color: c(c-window, label);
         font-size: em(14);
-        text-align: center;
         text-decoration: none;
 
         // States
