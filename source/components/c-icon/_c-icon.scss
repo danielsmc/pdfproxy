@@ -51,6 +51,11 @@
     &--pdf {
         position: absolute;
           top: ms(4, rem);
-          left: 30%;
+          right: 5%;
+
+        // Breakpoints
+        @include mappy-bp(palm-small) {
+            left: 30%;
+        }
     }
 }

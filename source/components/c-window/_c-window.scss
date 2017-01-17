@@ -46,7 +46,12 @@ $c-window-alert-inset: ms(5, rem);
         display: flex;
         flex-direction: column;
         margin: ms(1, rem);
-        width: rem(100);
+        width: rem(60);
+
+        // Breakpoints
+        @include mappy-bp(palm-small) {
+            width: rem(100);
+        }
     }
 
     &__thumbnail {
@@ -63,7 +68,7 @@ $c-window-alert-inset: ms(5, rem);
         outline: none;
 
         color: c(c-window, label);
-        font-size: em(14);
+        font-size: em(12);
         text-decoration: none;
 
         // States
@@ -82,6 +87,11 @@ $c-window-alert-inset: ms(5, rem);
 
         &:active {
             text-decoration: none;
+        }
+
+        // Breakpoints
+        @include mappy-bp(palm-small) {
+            font-size: em(14);
         }
     }
 
