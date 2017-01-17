@@ -15,12 +15,13 @@ pdfinternet.biz
 - Eric Bailey
     - Designer/Developer
     - Somerville, MA
-- @ericwbailey
+    - @ericwbailey
 
 
 ## Thanks
 - The Hot Garbage Crew
 - Adobe Systems
+- Smokey, Tribble, and Smokey
 
 
 ## Site
