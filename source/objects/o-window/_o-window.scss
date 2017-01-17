@@ -32,8 +32,8 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
 
     // Windows
     &--trash {
-        width: rem(450);
-        height: rem(260);
+        @include component-size(rem(260), rem(450), null);
+
         position: absolute;
           top: 6%;
           left: 3%;
@@ -41,8 +41,8 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
     }
 
     &--pdf {
-        width: rem(550);
-        height: rem(300);
+        @include component-size(rem(310), rem(550), null);
+
         position: absolute;
           top: 3%;
           left: 10%;
@@ -50,8 +50,8 @@ $o-window-outer-border: rem(7) solid c(l-window, border-outer);
     }
 
     &--folder {
-        width: 77vw;
-        height: 80vh;
+        @include component-size(80vh, 77vw, null);
+
         position: absolute;
           bottom: 8%;
           right: 3%;

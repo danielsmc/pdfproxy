@@ -20,8 +20,8 @@ $c-window-alert-inset: ms(5, rem);
     }
 
     &__close {
-        height: rem(26);
-        width: rem(26);
+        @include component-size(rem(26), rem(26), null);
+
         position: relative;
           bottom: rem(10);
 
@@ -47,9 +47,10 @@ $c-window-alert-inset: ms(5, rem);
     }
 
     &__thumbnail {
+        margin-bottom: rem(6);
+
         border: rem(4) solid white;
         outline: 1px solid c(c-window, border);
-        margin-bottom: rem(6);
     }
 
     &__link {
