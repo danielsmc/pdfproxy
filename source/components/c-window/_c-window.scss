@@ -39,11 +39,12 @@ $c-window-alert-inset: ms(5, rem);
     }
 
     &__file {
+        @include component-align(float, start);
+
         display: flex;
         flex-direction: column;
         margin: ms(1, rem);
         width: rem(100);
-        float: left;
     }
 
     &__thumbnail {
