@@ -43,8 +43,8 @@
 
 
 // Imports --------------------------------------------------------------------
-@import
-    "utilities/imports/typefaces";
+// @import
+//     "utilities/imports/typefaces";
 
 
 // Reset ----------------------------------------------------------------------
@@ -168,45 +168,42 @@
 
 // Base -----------------------------------------------------------------------
 @import
-    "base/root",
+    // "base/root",
     "base/html",
-    "base/body",
-    "base/global-attributes";
+    "base/body";
+    // "base/global-attributes";
 
 // Elements -------------------------------------------------------------------
 @import
     "elements/links",
-    "elements/headings",
+    // "elements/headings",
     "elements/icons",
-    "elements/paragraphs",
-    "elements/lists",
+    // "elements/paragraphs",
+    // "elements/lists",
     "elements/images",
     "elements/tables",
-    "elements/forms",
+    "elements/forms";
     // "elements/buttons",
-    "elements/text-level",
-    "elements/quotes",
-    "elements/code",
-    "elements/hr",
-    "elements/media",
-    "elements/embeds";
+    // "elements/text-level",
+    // "elements/quotes",
+    // "elements/code",
+    // "elements/hr",
+    // "elements/media",
+    // "elements/embeds";
 
 
 // Layout ---------------------------------------------------------------------
 @import
-    "layout/l-layout/l-layout",
     "layout/l-desktop/l-desktop";
 
 
 // Objects --------------------------------------------------------------------
 @import
-    "objects/o-object/o-object",
     "objects/o-window/o-window";
 
 
 // Components -----------------------------------------------------------------
 @import
-    "components/c-component/c-component",
     "components/c-button/c-button",
     "components/c-garbage-table/c-garbage-table",
     "components/c-icon/c-icon",
