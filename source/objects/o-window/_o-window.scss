@@ -44,6 +44,8 @@ $o-window-outer-border: border(thickest) solid c(l-window, border-outer);
         // Breakpoints
         @include mappy-bp(palm-small) {
             @include component-size(80vh, rem(550), null);
+
+            left: 21%;
         }
     }
 
