@@ -60,4 +60,9 @@ qsForEach('[data-drag-handle] img', function(img) {
   img.addEventListener("dragstart", function(e) { e.preventDefault(); });
 });
 
+document.addEventListener("submit", function(event) {
+  var formControls = document.getElementById("form-controls");
+  formControls.setAttribute("disabled", "disabled");
+});
+
 })();
