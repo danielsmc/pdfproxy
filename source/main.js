@@ -18,7 +18,7 @@ qsForEach(".c-icon", function(el) {
   var sound = document.getElementById(el.dataset.clickSound);
   if (win) {
     el.addEventListener("dblclick", function(event) {
-      win.className += " o-window--open";
+      win.classList.add("o-window--open");
       if (sound) sound.play();
     });
   }
@@ -27,7 +27,7 @@ qsForEach(".c-icon", function(el) {
 qsForEach("[data-window-close]", function(el) {
   var win = matchingParent(el,'.o-window');
   el.addEventListener("click", function(event) {
-    win.className = win.className.replace(/\bo-window--open\b/g,"");
+    win.classList.remove("o-window--open");
   });
 });
 
