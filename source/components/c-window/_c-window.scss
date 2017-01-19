@@ -52,6 +52,10 @@ $c-window-alert-inset: ms(5, rem);
         @include mappy-bp(palm-small) {
             width: rem(100);
         }
+
+        &--computer {
+            z-index: z(c-window-file-computer);
+        }
     }
 
     &__thumbnail {
@@ -94,6 +98,10 @@ $c-window-alert-inset: ms(5, rem);
         @include mappy-bp(palm-small) {
             font-size: em(14);
         }
+
+        &--printer {
+            @include content-show-interaction(link);
+        }
     }
 
     &__alert-message {
@@ -127,5 +135,16 @@ $c-window-alert-inset: ms(5, rem);
         &:active {
             text-decoration: none;
         }
+    }
+
+    &__file-upload {
+        @include component-size(rem(110), rem(110), null);
+        @include content-show-interaction(link);
+
+        position: absolute;
+          top: rem(106);
+          left: rem(28);
+
+        opacity: 0;
     }
 }
