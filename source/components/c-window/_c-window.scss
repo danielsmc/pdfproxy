@@ -1,0 +1,152 @@
+// ============================================================================
+// Component
+// Window
+// ============================================================================
+
+
+// Component Logic ------------------------------------------------------------
+$c-window-alert-inset: ms(5, rem);
+
+
+// Component Styling ----------------------------------------------------------
+.c-window {
+    &__title {
+        @include component-set-type-size();
+        @include content-no-select();
+
+        font-size: em(18);
+        line-height: 1;
+
+        cursor: grab;
+    }
+
+    &__close {
+        @include component-size(rem(26), rem(26), null);
+
+        position: relative;
+          bottom: rem(10);
+
+        outline: none;
+
+        background-color: transparent;
+
+        // Icon
+        svg {
+            &:active,
+            &:focus {
+                fill: white;
+            }
+        }
+    }
+
+    &__file {
+        @include component-align(float, start);
+        @include content-no-select();
+
+        display: flex;
+        flex-direction: column;
+        margin: ms(1, rem);
+        width: rem(60);
+
+        // Breakpoints
+        @include mappy-bp(palm-small) {
+            width: rem(100);
+        }
+
+        &--computer {
+            z-index: z(c-window-file-computer);
+        }
+    }
+
+    &__thumbnail {
+        margin-bottom: rem(6);
+
+        border: border(thicker) solid white;
+        outline: 1px solid c(c-window, border);
+        box-shadow: shadow(small) transparentize(c(base, type), 0.8);
+    }
+
+    &__link {
+        @include component-set-type-size();
+        @include typography-align(center);
+
+        outline: none;
+
+        color: c(c-window, label);
+        font-size: em(12);
+        text-decoration: none;
+
+        // States
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:active,
+        &:focus {
+            outline: ($global-border-radius * 2) solid c(highlight, background);
+
+            background-color: c(highlight, background);
+
+            color: c(highlight, text);
+        }
+
+        &:active {
+            text-decoration: none;
+        }
+
+        // Breakpoints
+        @include mappy-bp(palm-small) {
+            font-size: em(14);
+        }
+
+        &--printer {
+            @include content-show-interaction(link);
+        }
+    }
+
+    &__alert-message {
+        margin: ms(0.5, rem) ms(2, rem) ms(1.25, rem) $c-window-alert-inset;
+
+        cursor: default;
+    }
+
+    &__input {
+        margin-left: $c-window-alert-inset;
+        width: ms(18, rem);
+    }
+
+    &__hint {
+        @include component-set-type-size();
+
+        position: absolute;
+        margin-top: ms(0.5, rem);
+        margin-left: $c-window-alert-inset;
+
+        color: c(c-window, link);
+        font-size: em(15);
+        text-decoration: none;
+        border-bottom: 1px dotted currentColor;
+
+
+        // States
+        &:hover,
+        &:focus {
+            border-bottom: 1px dotted c(l-window, background-outer);
+        }
+
+        &:active {
+            color: c(base, type);
+        }
+    }
+
+    &__file-upload {
+        @include component-size(rem(110), rem(110), null);
+        @include content-show-interaction(link);
+
+        position: absolute;
+          top: rem(106);
+          left: rem(28);
+
+        opacity: 0;
+    }
+}

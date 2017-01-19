@@ -43,16 +43,9 @@
 
 
 // Imports --------------------------------------------------------------------
-@import
-    "utilities/imports/typefaces";
+// @import
+//     "utilities/imports/typefaces";
 
-
-// Reset ----------------------------------------------------------------------
-// `normalize.css` fixes inconsistencies across major browsers, then
-// `base/_reset.scss` zeroes out elements and provides some extra defaults.
-@import
-    "../node_modules/normalize.css/normalize", // https://necolas.github.io/normalize.css/
-    "base/reset";
 
 // Functions ------------------------------------------------------------------
 @import
@@ -166,9 +159,18 @@
 //     false // Colorblindness type
 // );
 
+
+// Reset ----------------------------------------------------------------------
+// `normalize.css` fixes inconsistencies across major browsers, then
+// `base/_reset.scss` zeroes out elements and provides some extra defaults.
+@import
+    "../node_modules/normalize.css/normalize", // https://necolas.github.io/normalize.css/
+    "base/reset";
+
+
 // Base -----------------------------------------------------------------------
 @import
-    "base/root",
+    // "base/root",
     "base/html",
     "base/body",
     "base/global-attributes";
@@ -176,41 +178,43 @@
 // Elements -------------------------------------------------------------------
 @import
     "elements/links",
-    "elements/headings",
+    // "elements/headings",
     "elements/icons",
-    "elements/paragraphs",
-    "elements/lists",
+    // "elements/paragraphs",
+    // "elements/lists",
     "elements/images",
     "elements/tables",
-    "elements/forms",
-    "elements/buttons",
-    "elements/text-level",
-    "elements/quotes",
-    "elements/code",
-    "elements/hr",
-    "elements/media",
-    "elements/embeds";
+    "elements/forms";
+    // "elements/buttons",
+    // "elements/text-level",
+    // "elements/quotes",
+    // "elements/code",
+    // "elements/hr",
+    // "elements/media",
+    // "elements/embeds";
 
 
 // Layout ---------------------------------------------------------------------
 @import
-    "layout/l-layout/l-layout";
+    "layout/l-desktop/l-desktop";
 
 
 // Objects --------------------------------------------------------------------
 @import
-    "objects/o-object/o-object";
+    "objects/o-window/o-window";
 
 
 // Components -----------------------------------------------------------------
 @import
-    "components/c-component/c-component",
-    "components/c-skipnav/c-skipnav";
+    "components/c-button/c-button",
+    "components/c-garbage-table/c-garbage-table",
+    "components/c-icon/c-icon",
+    "components/c-window/c-window";
 
 
 // Media ----------------------------------------------------------------------
-@import
-    "meta/media/print";
+// @import
+//     "meta/media/print";
 
 
 // Shame ----------------------------------------------------------------------

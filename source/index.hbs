@@ -4,22 +4,21 @@
 
 {{>meta/description/charset-and-viewport}}
 
-<title>{{content.title.home}} | pdfproxy</title>
+<title>pdfproxy</title>
 {{>meta/description/description}}
 {{>meta/description/author}}
 
 {{>meta/styles/main}}
-{{>vendor/modernizr/modernizr}}
 
 {{>meta/icons-and-theming/icons-and-theming}}
 {{>meta/social-media/facebook}}
 {{>meta/social-media/twitter}}
 {{>meta/social-media/google-plus}}
 
+<link rel="prefetch" href="static/audio/alert.mp3">
+
 </head>
 <body>
-
-{{>components/c-skipnav/c-skipnav}}
 
 <!-- Start of Icon Sprite -->
 <div class="icon-sprite">
@@ -27,25 +26,106 @@
 </div>
 <!-- End of Icon Sprite -->
 
-{{>objects/o-browserupgrade/o-browserupgrade}}
+<main
+    class="l-desktop"
+    role="main">
 
-<main>
+<h1 class="content-hide-visually">Desktop</h1>
 
-<h1>hi hello screenshot test</h1>
-<h2 style="color:teal">
-    {{content.title.home}}
-</h2>
-<h2 style="color:red;">
-    the time is {{timestamp}}
-</h2>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar aliquam erat nec egestas. Vestibulum sed ultricies odio, sed fringilla augue. Fusce semper iaculis volutpat. Aliquam viverra viverra tellus, sit amet maximus turpis aliquam et. Duis urna lorem, efficitur non consequat sed, pulvinar nec eros. Nam id iaculis justo. Duis dignissim est metus. Nam placerat turpis ut bibendum venenatis. In in egestas purus.
-</p>
+{{>layout/l-desktop/l-desktop}}
 
 </main>
 
+<!-- Start of #garbage-window -->
+<aside
+    id="computer-window"
+    class="o-window o-window--computer"
+    role="complementary"
+    data-draggable>
+
+    <div class="o-window__titlebar" data-drag-handle>
+        <h2 class="c-window__title">Computer</h2>
+        {{>objects/o-window/o-window.titlebar}}
+    </div>
+
+    <div class="o-window__content">
+        {{>objects/o-window/o-window.computer}}
+    </div>
+
+    <div class="o-window__summary">
+        <p>3 files, 34.9 MB available</p>
+    </div>
+
+</aside>
+<!-- End of #garbage-window -->
+
+<!-- Start of #garbage-window -->
+<aside
+    id="trash-window"
+    class="o-window o-window--trash"
+    role="complementary"
+    data-draggable>
+
+    <div class="o-window__titlebar" data-drag-handle>
+        <h2 class="c-window__title">Garbage</h2>
+        {{>objects/o-window/o-window.titlebar}}
+    </div>
+
+    <div class="o-window__content">
+        {{>objects/o-window/o-window.garbage}}
+    </div>
+
+    <div class="o-window__summary">
+        <p>3 files, 34.9 MB available</p>
+    </div>
+
+</aside>
+<!-- End of #garbage-window -->
+
+<!-- Start of #folder-window -->
+<aside
+    id="folder-window"
+    class="o-window o-window--folder"
+    role="complementary"
+    data-draggable>
+
+    <div class="o-window__titlebar" data-drag-handle>
+        <h2 class="c-window__title">cat pics</h2>
+        {{>objects/o-window/o-window.titlebar}}
+    </div>
+
+    <div class="o-window__content">
+        {{>objects/o-window/o-window.cat-pics}}
+    </div>
+
+    <div class="o-window__summary">
+        <p>7 files, 34.9 MB available</p>
+    </div>
+
+</aside>
+<!-- End of #folder-window -->
+
+<!-- Start of #pdf-window -->
+<aside
+    id="pdf-window"
+    class="o-window o-window--pdf"
+    role="complementary"
+    data-draggable>
+
+    <div class="o-window__titlebar" data-drag-handle>
+        <h2 class="c-window__title">Problem with Shortcut</h2>
+        {{>objects/o-window/o-window.titlebar}}
+    </div>
+
+    <div class="o-window__content o-window--alert">
+        {{>objects/o-window/o-window.alert}}
+    </div>
+</aside>
+<!-- End of #pdf-window -->
+
+<audio src="static/audio/alert.mp3" id="audio-alert"></audio>
+
 {{>meta/scripts/main}}
-{{>meta/scripts/plugins}}
 {{>meta/analytics/google-analytics}}
 
 </body>

@@ -1,0 +1,146 @@
+// ============================================================================
+// Object
+// Window
+// ============================================================================
+
+
+// Object Logic ---------------------------------------------------------------
+$o-window-outer-border: border(thickest) solid c(l-window, border-outer);
+
+@mixin o-window-background() {
+    background: #cfd6e1;
+    background: -moz-linear-gradient(left, #cfd6e1 0%, #fefefe 50%, #cfd6e1 100%);
+    background: -webkit-linear-gradient(left, #cfd6e1 0%, #fefefe 50%, #cfd6e1 100%);
+    background: linear-gradient(to right, #cfd6e1 0%, #fefefe 50%, #cfd6e1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfd6e1', endColorstr='#cfd6e1',GradientType=1 );
+}
+
+
+// Object Styling -------------------------------------------------------------
+.o-window {
+    @include content-hide(remove);
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-right: $o-window-outer-border;
+    border-left: $o-window-outer-border;
+    border-radius: $global-border-radius $global-border-radius 0 0;
+
+    background-color: c(l-window, background-inner);
+    box-shadow: shadow(large) transparentize(c(base, type), 0.5);
+
+    // Windows
+    &--computer {
+        @include component-size(66vh, rem(350), null);
+
+        position: absolute;
+          top: 11%;
+          left: 3%;
+        z-index: z(o-window-computer);
+
+        transition: width animation-duration(shortest) animation-ease(background);
+
+        // Breakpoints
+        @include mappy-bp(palm-small) {
+            @include component-size(80vh, rem(550), null);
+
+            left: 21%;
+        }
+    }
+
+    &--trash {
+        @include component-size(rem(300), rem(350), null);
+
+        position: absolute;
+          top: 6%;
+          left: 3%;
+        z-index: z(o-window-trash);
+
+        transition: width animation-duration(shortest) animation-ease(background);
+
+        // Breakpoints
+        @include mappy-bp(palm-small) {
+            width: rem(450);
+        }
+    }
+
+    &--pdf {
+        @include component-size(rem(310), rem(550), null);
+
+        position: absolute;
+          top: 3%;
+          left: 10%;
+        z-index: z(ceiling);
+    }
+
+    &--folder {
+        @include component-size(80vh, 89vw, null);
+
+        position: absolute;
+          bottom: 8%;
+          right: 3%;
+        z-index: z(o-window-folder);
+
+        // Breakpoints
+        @include mappy-bp(palm-small) {
+            width: 77vw;
+        }
+    }
+
+    // States
+    &--open {
+        display: flex;
+    }
+
+    &--alert {
+        background-color: #cfd6e1;
+        background-image: url(images/objects/o-window/alert.png);
+        background-repeat: no-repeat;
+        background-position: top rem(10) left rem(20);
+        background-size: rem(70);
+    }
+
+    &__titlebar {
+        @include o-window-background();
+
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-top: rem(2);
+
+        background-color: c(l-window, background-outer);
+
+        cursor: grab;
+    }
+
+    &__content {
+        @include content-delobotomize();
+
+        flex-grow: 1;
+        padding: ms(0.5, rem);
+
+        border-top: 2px solid c(l-window, border-inner);
+    }
+
+    &__summary {
+        @include component-set-type-size();
+        @include content-delobotomize();
+        @include typography-align(end);
+        @include o-window-background();
+
+        padding-top: rem(4);
+        padding-bottom: rem(4);
+
+        border-top: 1px solid c(l-window, border-inner);
+
+        color: lighten(c(base, type), 30%);
+        font-size: em(11);
+
+        cursor: default;
+    }
+
+    &__files {
+        list-style-type: none;
+    }
+}

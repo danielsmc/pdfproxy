@@ -3,29 +3,46 @@ humanstxt.org
 
 
 pdfproxy
-http://pdfinternet.biz
+pdfinternet.biz
 
 
 ## Team
-- Name
-	- Title
-	- Location
-	- Email
-	- Twitter
+## Team
+- Dan McLaughlin
+    - Developer
+    - Cambridge, MA
+    - @mclaughlin
+- Eric Bailey
+    - Designer/Developer
+    - Somerville, MA
+    - @ericwbailey
 
 
 ## Thanks
-- Name
-	- URL or contact info
+- The Hot Garbage Crew
+- Adobe Systems
+- Bucket, instagram.com/fuzzbucketcat
+- Tribble
+- Smokey, http://russellgoldenberg.com/smokey/
 
 
 ## Site
 - Standards
 	- HTML5
 	- CSS3
-	- etc.
+	- JavaScript
 - Components
-	- jQuery
-	- etc.
+    - Crystal Project Icons, github.com/thecodingmachine/crystal-project
+    - Docker, docker.com
+    - Git, git-scm.com
+    - GitHub, github.com
+    - Heroku, heroku.com
+    - Node.js, nodejs.org
 - Software
-	- Software used for the development
+    - Atom, atom.io
+    - Chrome, google.com/chrome
+    - Firefox, mozilla.org/en-US/firefox/new
+    - Safari, apple.com/safari
+    - Sketch, sketchapp.com
+    - Sublime, sublimetext.com
+    - Tower, git-tower.com

@@ -1,0 +1,77 @@
+// ============================================================================
+// Component
+// Garbage Table
+// ============================================================================
+
+
+// Component Logic ------------------------------------------------------------
+
+
+
+// Component Styling ----------------------------------------------------------
+.c-garbage-table {
+    tr {
+        &:first-of-type {
+            td {
+                @include first(2) {
+                    border-top: none;
+                }
+            }
+        }
+    }
+
+    td {
+        padding: em(10);
+
+        border-color: c(c-garbage-table, border);
+
+        &[scope="row"] {
+            @include table-col-width-66();
+        }
+    }
+
+    &__icon {
+        @include component-size(rem(20), rem(20), null);
+
+        margin-right: rem(8);
+        position: relative;
+
+        &--twitter {
+            top: rem(6);
+
+            fill: c(c-garbage-table, twitter);
+        }
+
+        &--github {
+            top: rem(4);
+        }
+
+        &--fresh-garbage {
+            top: rem(2);
+
+            fill: c(base, type);
+        }
+    }
+
+    &__link {
+        color: c(base, type);
+        text-decoration: none;
+
+        // States
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &:active {
+            text-decoration: none;
+        }
+    }
+
+    &__type {
+        color: lighten(c(base, type), 50%);
+        font-size: 80%;
+
+        cursor: default;
+    }
+}

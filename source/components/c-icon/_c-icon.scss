@@ -1,0 +1,61 @@
+// ============================================================================
+// Component
+// Icon
+// ============================================================================
+
+
+// Component Logic ------------------------------------------------------------
+
+
+
+// Component Styling ----------------------------------------------------------
+.c-icon {
+    @include component-size(rem(120), rem(120), null);
+    @include content-no-select();
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: ms(1, rem);
+
+    background-color: transparent;
+
+    text-align: inherit;
+
+    // States
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active,
+    &:focus {
+        outline: $global-border-radius solid c(highlight, background);
+
+        background-color: c(highlight, background);
+
+        color: c(highlight, text);
+    }
+
+    &__image {
+        @include component-size(rem(80), rem(80), ms(0.25, rem));
+
+        background-color: transparent;
+    }
+
+    &__label {
+        margin-top: ms(0.5, rem);
+
+        line-height: 1;
+    }
+
+    &--pdf {
+        position: absolute;
+          top: ms(4, rem);
+          right: 5%;
+
+        // Breakpoints
+        @include mappy-bp(palm-small) {
+            left: 30%;
+        }
+    }
+}

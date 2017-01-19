@@ -36,7 +36,7 @@ $colors: (
     // Base -------------------------------------------------------------------
     base: (
         type:       #111111,
-        background: #ffffff
+        background: #0194cb
     ),
 
 
@@ -50,6 +50,12 @@ $colors: (
         busy:    #dddddd
     ),
 
+    // Highlights -------------------------------------------------------------
+    highlight: (
+        background: #205790,
+        text:  #ffffff
+    ),
+
 
     // Headings ---------------------------------------------------------------
     heading: (
@@ -61,28 +67,47 @@ $colors: (
 
     // Buttons ----------------------------------------------------------------
     button: (
-        type:   #ffffff,
-        base:   #0074d9,
-        hover:  #7fdbff,
-        focus:  #ff851b,
-        active: #ff4136,
-        busy:   #dddddd
+        text:                 #ffffff,
+        background-primary:   #0074d9,
+        background-secondary: #879caa,
     ),
 
 
     // Forms ------------------------------------------------------------------
     form: (
-        base:   #0074d9,
-        hover:  #7fdbff,
-        focus:  #ff851b,
-        active: #ff4136,
-        busy:   #dddddd
-    )
+        base:   #879caa,
+        hover:  #738591,
+        focus:  #111111,
+        active: #111111,
+        busy:   #879caa
+    ),
 
 
     // Component --------------------------------------------------------------
-//    c-component: (
-//        subcomponent: value,
-//        subcomponent: value
-//    )
+    l-window: (
+       background-inner: #fefdfb,
+       background-outer: #cfd6e1,
+       border-inner: #879caa,
+       border-outer: #cfd6e1
+    ),
+
+
+    // Component --------------------------------------------------------------
+    c-garbage-table: (
+        border: #cfd6e1,
+        twitter: #059FF5
+    ),
+
+    c-icon: (
+       highlight-background: #205790,
+       highlight-text: #ffffff
+    ),
+
+    c-window: (
+       border: #879caa,
+       button-primary-base: #205790,
+       button-secondary-base: #879caa,
+       label: #111111,
+       link: #0074d9
+    )
 );

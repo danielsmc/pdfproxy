@@ -3,21 +3,35 @@
 // ============================================================================
 
 
-[contenteditable] {
+[disabled] {
+    @include content-remove-interaction();
 
+    opacity: 0.2;
+
+    cursor: not-allowed;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
 }
 
-
-[draggable] {
-
-}
-
-
-[dropzone] {
-
-}
-
-
-[spellcheck] {
-
-}
+// [contenteditable] {
+//
+// }
+//
+//
+// [draggable] {
+//
+// }
+//
+//
+// [dropzone] {
+//
+// }
+//
+//
+// [spellcheck] {
+//
+// }
