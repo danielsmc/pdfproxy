@@ -42,6 +42,10 @@
             fill: c(c-garbage-table, twitter);
         }
 
+        &--github {
+            top: rem(4);
+        }
+
         &--fresh-garbage {
             top: rem(2);
 

@@ -40,3 +40,7 @@ Contributions are welcome! Check out the [contributing guidelines](https://githu
 [WTFPL](https://raw.githubusercontent.com/danielsmc/pdfproxy/master/LICENSE).
 
 [Crystal Project Icons](https://github.com/thecodingmachine/crystal-project) licensed under the [GNU Lesser General Public License](https://www.gnu.org/licenses/lgpl-3.0.en.html).
+
+* * *
+
+Another [Dan](https://twitter.com/mclaughlin) and [Eric](https://twitter.com/ericwbailey) joint.

@@ -118,22 +118,24 @@ $c-window-alert-inset: ms(5, rem);
     &__hint {
         @include component-set-type-size();
 
-        display: block;
+        display: inline-block;
         margin-top: ms(0.5, rem);
         margin-left: $c-window-alert-inset;
 
-        color: c(base, type);
+        color: c(c-window, link);
         font-size: em(15);
         text-decoration: none;
+        border-bottom: 1px dotted currentColor;
+
 
         // States
         &:hover,
         &:focus {
-            text-decoration: underline;
+            border-bottom: 1px dotted c(l-window, background-outer);
         }
 
         &:active {
-            text-decoration: none;
+            color: c(base, type);
         }
     }
 
