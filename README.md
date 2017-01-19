@@ -13,7 +13,7 @@
 
 Finally, a chance show Aunt Gladys what "that awful internet" would be like if it was easier to read. Like a book! Or maybe a newspaper! Your grandfather, god rest his soul, loved reading those!
 
-After unearthing a copy of VaporSoft's DocuOS™ and getting it to run in a browser, we we were able to take advantage of the PDF file format's unique properties and place the internet in a PDF for you to use! Unfortunately, the way the technology works means that you have to [supply the initial URL yourself](URL).
+After unearthing a copy of VaporSoft's DocuOS™ and getting it to run in a browser, we we were able to take advantage of the PDF file format's unique properties and place the internet in a PDF for you to use! Unfortunately, the way the technology works means that you have to [supply the initial URL yourself](http://http://pdfinternet.biz/).
 
 
 ## Installation
