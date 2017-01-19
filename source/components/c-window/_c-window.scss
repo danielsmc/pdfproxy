@@ -118,7 +118,7 @@ $c-window-alert-inset: ms(5, rem);
     &__hint {
         @include component-set-type-size();
 
-        display: inline-block;
+        position: absolute;
         margin-top: ms(0.5, rem);
         margin-left: $c-window-alert-inset;
 

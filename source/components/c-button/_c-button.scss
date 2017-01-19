@@ -11,7 +11,7 @@
 // Component Styling ----------------------------------------------------------
 .c-button {
     @include component-align(float, end);
-    @include component-size(ms(1.75, rem), ms(5, rem), ms(1.25, rem));
+    @include component-size(ms(1.75, rem), ms(5, rem), ms(2.75, rem));
 
     margin-right: ms(1, rem);
 
