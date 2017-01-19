@@ -1,6 +1,5 @@
-# [pdfproxy](URL)
+# [pdfinternet.biz](http://http://pdfinternet.biz/)
 
-The internet is a document delivery service.
 
 ## Table of Contents
 
@@ -24,10 +23,6 @@ After unearthing a copy of VaporSoft's DocuOS™ and getting it to run in a brow
 This website is built using [enchilada](https://github.com/ericwbailey/enchilada). To get a copy working on your own machine, clone it via the command line: `https://github.com/ericwbailey/enchilada.git`
 
 From there, you can [follow enchilada's setup instructions](https://github.com/ericwbailey/enchilada/wiki/First-Time-Setup#scaffolding). Let us know if you run into any issues!
-
-### Backend
-
-TODO: ADD INFO ABOUT WORKING WITH DOCKER
 
 
 ## Contributing
