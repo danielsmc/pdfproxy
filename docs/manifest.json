@@ -1,0 +1,16 @@
+{
+	"name": "NAMENAME",
+	"icons": [
+		{
+			"src": "/static/favicons/android/android-chrome-192x192.png?ver={{timestamp}}",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/static/favicons/android/android-chrome-256x256.png?ver={{timestamp}}",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#ffffff"
+}
