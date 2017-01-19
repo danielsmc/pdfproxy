@@ -35,7 +35,7 @@ $o-window-outer-border: border(thickest) solid c(l-window, border-outer);
         @include component-size(66vh, rem(350), null);
 
         position: absolute;
-          top: 6%;
+          top: 11%;
           left: 3%;
         z-index: z(o-window-computer);
 
