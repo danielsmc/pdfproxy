@@ -3,7 +3,7 @@ humanstxt.org
 
 
 pdfproxy
-pdfinternet.biz
+internetdotpdf.biz
 
 
 ## Team
