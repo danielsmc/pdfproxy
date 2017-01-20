@@ -6,17 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/) and tries to f
 
 ## vNext - Unreleased
 
-- What you have planned
+- ¯\_(ツ)_/¯
 
-## [v0.3.0](https://github.com/danielsmc/pdfproxy/compare/v0.1.0...v0.2.0) - Unreleased
 
-- What you're working on
-
-## [v0.2.0](https://github.com/danielsmc/pdfproxy/compare/v0.1.0...v0.2.0) - yyyy-mm-dd
-
-- Update 1
-- Update 2
-
-## v0.1.0 - yyyy-mm-dd
+## v0.1.0 - 2017-01-19
 
 - Initial release.
