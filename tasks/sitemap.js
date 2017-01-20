@@ -16,7 +16,7 @@ gulp.task('build-sitemap', help.sitemap.build, function() {
         read: false
     })
     .pipe(sitemap({
-        siteUrl: 'https://http://pdfinternet.biz.com'
+        siteUrl: 'http://internetdotpdf.biz'
     }))
     .pipe(gulp.dest(paths.sitemap.build.dest));
 });
