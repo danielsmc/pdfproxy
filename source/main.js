@@ -61,8 +61,9 @@ qsForEach('[data-drag-handle] img', function(img) {
 });
 
 document.addEventListener("submit", function(event) {
-  var formControls = document.getElementById("form-controls");
-  formControls.setAttribute("disabled", "disabled");
+  setTimeout(function() {
+    event.target.querySelector("fieldset").setAttribute("disabled",true);
+  },0);
 });
 
 })();
