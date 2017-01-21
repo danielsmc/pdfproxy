@@ -10,7 +10,7 @@ app = flask.Flask(__name__)
 base_url = os.environ['BASE_URL']
 catchall_redirect = os.environ['CATCHALL_REDIRECT']
 
-munge = 'Array.prototype.forEach.call(document.querySelectorAll("a"),function(d) {d.href="%s?url="+encodeURIComponent(d.href);});'%base_url
+munge = 'Array.prototype.forEach.call(document.querySelectorAll("a"),function(d) {if (d.href.indexOf("%s") != 0) d.href="%s?url="+encodeURIComponent(d.href);});'%(base_url,base_url)
 
 @app.route("/")
 def proxy():
