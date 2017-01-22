@@ -1,13 +1,13 @@
 {
-	"name": "NAMENAME",
+	"name": "internetdotpdf.biz",
 	"icons": [
 		{
-			"src": "/static/favicons/android/android-chrome-192x192.png?ver={{timestamp}}",
+			"src": "/static/favicons/android/android-chrome-192x192.png",
 			"sizes": "192x192",
 			"type": "image/png"
 		},
 		{
-			"src": "/static/favicons/android/android-chrome-256x256.png?ver={{timestamp}}",
+			"src": "/static/favicons/android/android-chrome-256x256.png",
 			"sizes": "256x256",
 			"type": "image/png"
 		}
