@@ -16,15 +16,20 @@ munge = 'Array.prototype.forEach.call(document.querySelectorAll("a"),function(d)
 def proxy():
     url = flask.request.args.get('url')
     if url is None:
-    	return catchall()
+        raise ValueException("No URL Specified")
     if re.match("^https?://", url) is None:
-    	url = "http://"+url
+        url = "http://"+url
     content = subprocess.check_output(["wkhtmltopdf",url,'--run-script',munge,'-'])
     return flask.Response(content, mimetype='application/pdf')
 
-@app.route('/<path:path>')
-def catchall(path=None):
-	return flask.redirect(catchall_redirect)
+@app.route("/favicon.ico")
+def favicon():
+    return flask.send_from_directory("static","favicon.ico")
+
+@app.errorhandler(Exception)
+def catchall(e=None):
+    print e
+    return flask.redirect(catchall_redirect)
 
 if __name__ == "__main__":
     app.run()

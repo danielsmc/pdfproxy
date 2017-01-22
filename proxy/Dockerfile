@@ -20,7 +20,7 @@ RUN BUILD_PACKAGES="python-pip python-dev gcc wget xz-utils" && \
   rm -rf /var/lib/apt/lists/*
 
 
-ADD app.py /proxy/app.py
+ADD src proxy
 WORKDIR /proxy
 
 USER nobody
