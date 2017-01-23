@@ -22,7 +22,7 @@ qsForEach(".c-icon", function(el) {
       if (sound) sound.play();
     }
     el.addEventListener("dblclick", handle);
-    el.addEventListener("touchstart", handle);
+    el.addEventListener("touchend", handle);
   }
 });
 
