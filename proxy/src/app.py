@@ -16,7 +16,7 @@ munge = 'Array.prototype.forEach.call(document.querySelectorAll("a"),function(d)
 def proxy():
     url = flask.request.args.get('url')
     if url is None:
-        raise ValueException("No URL Specified")
+        raise ValueError("No URL Specified")
     if re.match("^https?://", url) is None:
         url = "http://"+url
     content = subprocess.check_output(["wkhtmltopdf",url,'--run-script',munge,'-'])
